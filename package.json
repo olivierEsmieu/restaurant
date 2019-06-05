@@ -1,7 +1,7 @@
 {
     "name": "restaurant",
     "version": "1.0.0",
-    "description": "restaurant,
+    "description": "restaurant",
     "main": "index.html",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
       "url": "git+https://github.com/olivierEsmieu/restaurant.git"
     },
     "keywords": [
-      "restaurant",
+      "restaurant"
     ],
     "author": "Olivier",
     "license": "MIT",
