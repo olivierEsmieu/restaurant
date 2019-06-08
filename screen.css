@@ -2,9 +2,237 @@
     box-sizing: border-box
 }
 html {
-    font-size:16px;
+    font-size:14px;
 }
 body {
     line-height: 1.625;
-    margin:0
+    margin:0;
+    font-family: 'source sans Pro', 'sans-serif';
+    color:#6F6F6F;
+}
+a {
+    color:inherit;
+    text-decoration:none;
+    transition: color 0.3s;
+}
+img{
+    max-width: 100%;
+    height:auto;
+}
+
+.header {
+    background: 
+    linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 39.24%,rgba(28, 28, 28, 0.4)),
+    url(./img/eggs.jpg) center center /cover no-repeat;
+    color:#fff;
+}
+.topbar {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    text-align:center;
+    padding: 18px 20px;
+}
+.menu-item:hover{
+    color:#C89446;
+}
+.logo {
+    margin-bottom: 10px;
+}
+.menu-item {
+    display:inline-block;
+    margin: 0 15px;
+}
+.menu-button {
+    border: solid 1px  #C89446;
+    padding: 7px 10px;
+    transition-property: color, background-color;
+    margin-bottom: 15px
+}
+.menu-button:hover {
+    background: #C89446;
+    color: #fff;
+}
+.baseline {
+    padding: 50px 0 70px 0;
+    line-height: 1;
+    text-align: center;
+}
+.baseline-welcome{
+    font-size: 2rem;
+    color:#C89446;
+    font-family: 'Pinyon Script', 'serif';
+    display: block;
+}
+.baseline-name {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+    
+}
+.baseline-slogan {
+    font-size: 1rem;
+    font-weight: 300;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.home-section {
+    padding-top: 9px;
+}
+.container-small {
+    padding: 0 20px;
+    max-width: 960px;
+    margin:0 auto;
+}
+.block {
+    margin-bottom: 50px;
+}
+.title {
+    font-size:1.75rem;
+    line-height: 1.1;
+    letter-spacing:2px;
+    text-transform: uppercase;
+    color: #383838;
+    font-weight: bold;
+    margin: 1rem 0 0 0;
+}
+.title span {
+    color:#C89446;
+    font-family: 'Pinyon Script', 'serif';
+    font-size: 2.5rem;
+    display: block;
+    text-transform: none;
+}
+.title::before{
+    content:"";
+    display: inline-block;
+    height: 3px;
+    width:24px;
+    background:#C89446;
+    margin-bottom: .5rem;
+}
+.more {
+    color:#C89446;
+}
+.more:hover {
+    text-decoration: underline;
+}
+.more::after {
+    content:' >';
+}
+.block-img {
+    border: solid 1px #C89446;
+    max-width: 350px;
+    margin: 0 auto;
+    }
+.block-img img {
+        display: block;  
+    }
+.block-img img {
+        position: relative;
+        z-index:1
+    }
+.block-centered {
+    text-align: center;
+}
+@media only screen and (min-width: 600px) {
+html {
+    font-size:16px;
+}    
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+.logo {
+    margin-bottom: 0;
+}
+
+.baseline{
+    padding: 125px 0 227px;
+}
+.baseline-welcome {
+    font-size: 3.75rem;
+}
+.menu-button{
+    margin-bottom: 0;
+    margin-right:0;
+}
+.baseline-name {
+    font-size: 4.375rem;
+    letter-spacing: 12px;
+    padding-top: 8px;
+
+}
+.baseline-slogan {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    padding-bottom: 18px;
+
+}
+@media only screen and (min-width:800px) {
+.block-left, .block-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.block-img {
+    border:none;
+    /* flex:none; */
+    position: relative;
+}
+.block-left .block-body, .block-right .block-body {
+    width: 445px;
+    flex:none;
+}
+.block-img::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border:solid 1px #C89446;
+    top: -30px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    z-index:0;
+}
+.block-right .block-img::before {
+    left: auto;
+    right: -30px;
+}
+
+.block-left .block-img {
+    margin-left:30px;
+}
+.block-right .block-img {
+    margin-right:30px;
+}
+.block-left .block-body {
+    margin-left:20px;
+}
+.block-right .block-body {
+    margin-right:20px;
+    order:-1;
+ }
+.title {
+    margin-bottom: 1.2rem;
+}
+.title::before {
+    margin-bottom: 10px;
+}
+.more {
+    display: block;
+    margin-top: 1.3rem;
+}
+.home-section {
+    background: 
+    fixed top 95px right 0px url(./img/oranges.jpg) no-repeat,
+    fixed top 640px left 0px url(./img/spices.jpg) no-repeat;
+}
 }
