@@ -1,4 +1,4 @@
-*, *::before, *::after{
+*, *::before, *::after {
     box-sizing: border-box
 }
 html {
@@ -7,7 +7,7 @@ html {
 body {
     line-height: 1.625;
     margin:0;
-    font-family: 'Source Sans Pro', 'sans-serif';
+    font-family: 'Source Sans Pro', sans-serif;
     color:#6F6F6F;
 }
 a {
@@ -15,11 +15,10 @@ a {
     text-decoration:none;
     transition: color 0.3s;
 }
-img{
+img {
     max-width: 100%;
     height:auto;
 }
-
 .header {
     background: 
     linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 39.24%,rgba(28, 28, 28, 0.4)),
@@ -29,7 +28,7 @@ img{
 .topbar {
     font-size: 0.875rem;
     text-transform: uppercase;
-    text-align:center;
+    text-align: center;
     padding: 18px 20px;
 }
 .menu-item:hover{
@@ -95,6 +94,7 @@ img{
 .block {
     margin-bottom: 50px;
 }
+
 .title {
     font-size:1.75rem;
     line-height: 1.1;
@@ -273,6 +273,10 @@ border-color:#C89446
     padding: 50px 0;
     background: url(img/news-bg.jpg) top 0 left 0 / 80vw auto no-repeat
 }
+.recipes a:hover {
+    text-decoration:underline;
+color:#C89446;
+}
 .recipes .more {
     display: block;
     margin-top: 60px;
@@ -355,6 +359,91 @@ footer ul li:before {
     font-size:0.8em;
 }
 
+.block-ingredients {
+    border: solid 1px #C89446;
+    padding: 35px 20px;
+    color: #383838;
+    font-weight: 600;
+    /* line-height: 3.125rem; */
+}
+.block-ingredients ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.block-ingredients li {
+    padding: 5px 0;
+}
+.block-ingredients span {
+    display: inline-block;
+    text-align: right;
+    width: 35px;
+    margin-right: 20px;
+    font-weight: 300;
+}
+.section-overflow {
+    padding: 20px 0;
+}
+.block-video {
+    text-align: center;
+    display: block;
+    max-width: 540px;
+    margin: auto auto;
+    position: relative;
+    background: #383838;
+}  
+.block-video img {
+    box-shadow: 0 0 30px rgba(128,128,128, 0.5);
+    opacity: 1.2;
+    display: block;
+    translate: .3s;
+}
+.block-video:hover img {
+opacity: .9;
+}
+.block-video::after {
+content:'';
+background: url(img/play.png) center center no-repeat;
+position: absolute;
+width: 62px;
+height: 62px;
+top: calc(50% - 31px);
+left: calc(50% - 31px);
+transition: transform .3s;
+}
+.block-video:hover::after {
+    transform: scale(1.1);
+}
+.recipes-mosaic p {
+    margin-top:0;
+    margin-bottom: 0.5rem;
+}
+.recipes-mosaic .more {
+    margin-top: 0.5rem;
+}
+.pagination {
+    list-style: none;
+    padding:0;
+    margin: 30px 0;
+    text-align: center;
+}
+.pagination li {
+    display: inline-block;
+}
+.pagination a {
+border:solid 1px #C89446;
+display:inline-block;
+width: 7px;
+height: 7px;
+border-radius: 7px;
+text-indent: -3000px;
+overflow: hidden;
+margin: 0 10px;
+transition: background .3s;
+}
+.pagination a.active , .pagination a:hover{
+    background: #C89446;
+}
 @media only screen and (min-width: 600px) {
 html {
     font-size: 16px;
@@ -404,8 +493,7 @@ html {
 }
 .block-img {
     border:none;
-    /* flex:none; */
-    position: relative;
+     position: relative;
 }
 .block-left .block-body, .block-right .block-body {
     width: 445px;
@@ -426,7 +514,6 @@ html {
     left: auto;
     right: -30px;
 }
-
 .block-left .block-img {
     margin-left:30px;
 }
@@ -470,12 +557,12 @@ html {
     margin-bottom: 110px;
     width: calc(50% - 35px);
 }
-.menu-summary-item:nth-child(even) {
+.menu-summary .menu-summary-item:nth-child(even) {
     padding-left:0;
     padding-right:192px;
     text-align: right;
 }
-.menu-summary-item:nth-child(even) .menu-summary-img {
+.menu-summary .menu-summary-item:nth-child(even) .menu-summary-img {
     right:0;
     left:auto;
 }
@@ -488,7 +575,7 @@ html {
     background: #fff
 }
 .menu-summary p {
-background: #fff
+background: #fff;
 }
 
 .menu-summary-price{
@@ -583,5 +670,44 @@ footer {
 .footer-column:last-child {
     margin-right: 0;
     flex:none;
+}
+.block-ingredients span {
+    width: 35px;
+    margin-right: 50px;
+}
+.block-ingredients {
+    width: 350px;
+    padding: 35px 40px;
+}
+.block-ingredients li {
+    padding: 10px 0;
+}
+.section-overflow {
+    padding: 0 0;
+    margin-top: -20px;
+}
+.block-right .block-video {
+    margin-left:28px;
+}
+.recipes-mosaic {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -60px;
+
+}
+.recipes-mosaic .menu-summary-item {
+    width: calc(50% - 25px);
+    padding-left: 150px;
+}
+.recipes-mosaic .menu-summary-item {
+margin-bottom: 60px;
+font-size: 0.875rem;
+}
+.recipes-mosaic .menu-summary-img {
+width:125px;
+}
+.pagination {
+    margin: 60px;
 }
 }
